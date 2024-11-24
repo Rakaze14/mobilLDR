@@ -1,19 +1,23 @@
+//Made By Kipli :>
+//(づ｡◕‿‿◕｡)づ        〆(・∀・＠)
+//*************************************************************************************************************************//
+
 extern "C" {
   uint8_t LDR_DigitalRead(void);
   uint8_t LDR2_DigitalRead(void);
 }
 
 void setup() {
-  pinMode(4, INPUT);  // Digital pin 4 for first output
-  pinMode(5, INPUT);  // Digital pin 5 for first output
-  pinMode(6, INPUT);  // Digital pin 6 for second output
-  pinMode(7, INPUT);  // Digital pin 7 for second output
+  pinMode(4, INPUT);  // In1
+  pinMode(5, INPUT);  // In2
+  pinMode(6, INPUT);  // In3
+  pinMode(7, INPUT);  // In4
 
 }
 
 void loop() {
-  uint8_t ldrValue = LDR_DigitalRead();   // Read dari LDR 1
-  uint8_t ldrValue2 = LDR2_DigitalRead(); // Read dari LDR 2
+  uint8_t ldrValue = LDR_DigitalRead();   // Membaca dari LDR 1
+  uint8_t ldrValue2 = LDR2_DigitalRead(); // Membaca dari LDR 2
   
   // Control
   if (ldrValue) {
